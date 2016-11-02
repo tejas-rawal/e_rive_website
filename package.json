@@ -1,0 +1,26 @@
+{
+  "name": "E-Rive",
+  "version": "0.0.1",
+  "description": "Customer website for E-Rive",
+  "main": "webpack.config.js",
+  "repository": {
+    "url": "https://github.com/tejas-rawal/e_rive_website.git",
+    "type": "git"
+  },
+  "author": "Tejas Rawal",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "webpack": "^1.13.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  }
+}
