@@ -19,9 +19,9 @@ page '/*.txt', layout: false
 # General configuration
 
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+# configure :development do
+#   activate :livereload
+# end
 
 ###
 # Helpers
@@ -36,11 +36,21 @@ end
 
 # Build-specific configuration
 configure :build do
+  set :protocol, "https://"
   # Minify CSS on build
   activate :minify_css
-
   # Minify Javascript on build
   activate :minify_javascript
+  activate :gzip, exts: %w(.js .css .html .htm .svg .ttf .otf .woff .eot)
+end
+
+configure :development do
+  set :protocol, "http://"
+  set :host, "localhost"
+  set :port, "4567"
+  set :debug_assets, true
+  # Hot reload
+  activate :livereload
 end
 
 activate :external_pipeline,
@@ -48,5 +58,8 @@ activate :external_pipeline,
          command: build? ?
          "./node_modules/webpack/bin/webpack.js --bail -p" :
          "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
-         source: "./source/code",
+         source: ".tmp/dist",
          latency: 1
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'

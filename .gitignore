@@ -14,6 +14,11 @@
 /.sass-cache
 /.cache
 
+#Ignore node dependencies
 /node_modules
+/tmp
+/dist
+/.tmp
+
 # Ignore .DS_store file
 .DS_Store
