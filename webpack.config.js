@@ -23,6 +23,7 @@ module.exports = {
 
   output: {
     path: __dirname + '/.tmp/dist',
+    publicPath: '/',
     filename: 'assets/javascripts/[name].bundle.js'
   },
 
@@ -42,13 +43,23 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', "css!sass?sourceMap&includePaths[]=" + __dirname + "/node_modules")
       },
 
-      { test: /\.css$/, loader: "style!css" }
+      { test: /\.css$/, loader: "style!css" },
+
+      {
+        test: /.*\.(gif|png|jpe?g|jpg|svg)$/i,
+        loaders: [
+            'file?hash=sha512&digest=hex&name=assets/images/[name].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      }
     ]
   },
 
   node: {
     console: true
   },
+
+  watch: true,
 
   plugins: [
     definePlugin,
