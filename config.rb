@@ -63,3 +63,4 @@ activate :external_pipeline,
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
+set :img_dir, 'assets/images'
