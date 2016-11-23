@@ -34,14 +34,27 @@ page '/*.txt', layout: false
 #   end
 # end
 
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ?
+         "./node_modules/webpack/bin/webpack.js --bail -p" :
+         "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+         source: ".tmp/dist",
+         latency: 1
+
+set :css_dir, "assets/stylesheets"
+set :js_dir, "assets/javascripts"
+set :img_dir, "assets/images"
+
 # Build-specific configuration
 configure :build do
-  set :protocol, "https://"
+  set :trailing_slash, false
+  # set :protocol, "https://"
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
   # Minify Javascript on build
-  activate :minify_javascript
-  activate :gzip, exts: %w(.js .css .html .htm .svg .ttf .otf .woff .eot)
+  # activate :minify_javascript
+  # activate :gzip, exts: %w(.js .css .html .htm .svg .ttf .otf .woff .eot)
 end
 
 configure :development do
@@ -52,15 +65,3 @@ configure :development do
   # Hot reload
   activate :livereload
 end
-
-activate :external_pipeline,
-         name: :webpack,
-         command: build? ?
-         "./node_modules/webpack/bin/webpack.js --bail -p" :
-         "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
-         source: ".tmp/dist",
-         latency: 1
-
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :img_dir, 'assets/images'
