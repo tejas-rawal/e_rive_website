@@ -1,21 +1,21 @@
-<!-- <div id="header">
-  <div id="nav-container">
-    <div id="nav-holder">
-      <ul style="list-style-type:none">
-      </ul>
-    </div>
-  </div> -->
-  <!-- <div id="header-img"> -->
-    <div id="logo-container">
-      <img src="https://www5.rentcentric.com/Client6228/images/LocationID116photo-3.png" style="width:75px;" />
-    </div>
-    <div id="header-container">
-      <div id="header-text-container">
-        <h1 id="header-text">Low Cost Car Sharing</h1>
-        <!-- <div id="join-btn-container"> -->
-          <%= link_to 'Join Now', 'https://www5.rentcentric.com/Client6228/SelfServiceMobile/Register.aspx', class: 'button', id: 'sign_up_button' %>
-        <!-- </div> -->
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- </div> -->
+<div id="header">
+  <div class="header-div" id="logo-container">
+    <img src="https://www5.rentcentric.com/Client6228/images/LocationID116photo-3.png" />
+  </div>
+  <div class="header-div" id="nav-holder">
+    <ul>
+      <li class="nav-option">
+        <%= link_to 'Sign Up', 'https://www5.rentcentric.com/Client6228/SelfServiceMobile/Register.aspx', class: 'nav-link', target: '_blank' %>
+      </li>
+      <li class="nav-option">
+        <%= link_to 'About', '#about', class: 'nav-link section-link' %>
+      </li>
+      <li class="nav-option">
+        <%= link_to 'Pricing', '#pricing', class: 'nav-link section-link' %>
+      </li>
+      <li class="nav-option">
+        <%= link_to 'FAQ', '#faq', class: 'nav-link section-link' %>
+      </li>
+    </ul>
+  </div>
+</div>
