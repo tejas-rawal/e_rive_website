@@ -1,0 +1,63 @@
+@mixin main-site-bg {
+  background: $page-bg-gradient-start;
+  background: -moz-linear-gradient(top,  $page-bg-gradient-start 0%, $page-bg-gradient-end 100%);
+  background: -webkit-linear-gradient(top,  $page-bg-gradient-start 0%, $page-bg-gradient-end 100%);
+  background: linear-gradient(to bottom,  $page-bg-gradient-start 0%, $page-bg-gradient-end 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@mixin main-site-fnt {
+  font-family: $font-stack;
+}
+
+@mixin centered {
+  text-align: center;
+}
+
+@mixin inline-el {
+  display: inline-block;
+}
+
+@mixin bold-font {
+  font-family: proxima-bold;
+}
+
+@mixin align-left {
+  text-align: left;
+}
+
+@mixin align-right {
+  text-align: right;
+}
+
+@mixin upcase {
+  text-transform: uppercase;
+}
+
+@mixin underline {
+  text-decoration: underline;
+}
+
+@mixin div-shadow {
+  -moz-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, .5);
+}
+
+@mixin txt-shadow($color) {
+  text-shadow: 2px 2px 2px #{$color}, -1px -1px 0 #{$color}, 1px -1px 0 #{$color}, -1px 1px 0 #{$color}, 1px 1px 0 #{$color};
+}
+
+@mixin full-bg {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@mixin section-h1($color) {
+    margin: 0px auto 20px auto;
+    color: #{$color};
+    font-size: 40px;
+}
