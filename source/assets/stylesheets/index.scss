@@ -185,8 +185,11 @@ ul {
 }
 
 .step-text {
-  padding: 20px 0 20px 0;
+  padding: 20px 10px;
+  height: 80px;
+  background: $page-bg-gradient-end;
   text-align: justify;
+  border-radius: 5px;
 }
 
 .step-text span {

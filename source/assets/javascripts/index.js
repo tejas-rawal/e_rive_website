@@ -1,4 +1,4 @@
-require('/Users/tejasrawal/Work/e_rive_site/source/stylesheets/site.scss');
+// require('/Users/tejasrawal/Work/e_rive_site/source/stylesheets/index.scss');
 
 var pageNav = () => {
   var sectionLinks = document.getElementsByClassName('section-link');
