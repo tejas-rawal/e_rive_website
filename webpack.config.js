@@ -12,25 +12,25 @@ var definePlugin = new webpack.DefinePlugin({
 module.exports = {
   entry: {
     index: [
-      __dirname + '/source/stylesheets/site.scss',
-      __dirname + '/source/javascripts/index.js'
+      __dirname + '/source/assets/stylesheets/index.scss',
+      __dirname + '/source/assets/javascripts/index.js'
     ]
   },
 
   resolve: {
-    root: __dirname + '/source/javascripts',
+    root: __dirname + '/source/assets/javascripts',
   },
 
   output: {
+    // publicPath: '/',
     path: __dirname + '/.tmp/dist',
-    publicPath: '/',
     filename: 'assets/javascripts/[name].bundle.js'
   },
 
   module: {
     loaders: [
       {
-        test: /source\/javascripts\/*\.js$/,
+        test: /source\/assets\/javascripts\/*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
         loader: 'babel-loader',
         query: {
@@ -40,17 +40,17 @@ module.exports = {
 
       {
         test: /.*\.scss$/,
-        loader: ExtractTextPlugin.extract('style', "css!sass?sourceMap&includePaths[]=" + __dirname + "/node_modules")
+        loader: ExtractTextPlugin.extract(
+          "style",
+          "css!sass?sourceMap&includePaths[]=" + __dirname + "/node_modules"
+        )
       },
 
       { test: /\.css$/, loader: "style!css" },
 
       {
         test: /.*\.(gif|png|jpe?g|jpg|svg)$/i,
-        loaders: [
-            'file?hash=sha512&digest=hex&name=assets/images/[name].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
+        loader: "file?hash=sha512&digest=hex&name=assets/images/[name].[ext]"
       }
     ]
   },
@@ -59,18 +59,16 @@ module.exports = {
     console: true
   },
 
-  watch: true,
+  // watch: true,
 
   plugins: [
     definePlugin,
     new Clean(['.tmp']),
-    new ExtractTextPlugin('assets/stylesheets/index.bundle.css', {
-      allChunks: true
-    })
+    new ExtractTextPlugin("assets/stylesheets/index.bundle.css")
   ],
 
   resolve: {
-    moduleDirectories: ['node_modules', 'source'],
+    moduleDirectories: ['node_modules'],
     extensions: ['', '.js', '.scss']
   }
 };
