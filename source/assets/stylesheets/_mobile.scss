@@ -1,0 +1,277 @@
+.button {
+  @include upcase;
+  display: block;
+  margin: 5px auto;
+  padding: 15px 10px;
+  width: 145px;
+  background: $theme-color;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: none;
+}
+
+.section {
+  padding: 30px 20px;
+}
+
+#header {
+  display: none;
+}
+
+#header-mobile {
+  display: block;
+  margin: auto 5px;
+  padding: 5px;
+}
+
+#logo-container {
+  width: 45%;
+  @include align-left;
+}
+
+#logo-container img {
+  width: 60px;
+}
+
+.mobile-sign-up a {
+  @include upcase;
+  margin: 5px auto;
+  padding: 10px 15px;
+  background: $theme-color;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: none;
+}
+
+#main-display {
+  box-shadow: none;
+}
+
+#display-text-container {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+#company-slogan {
+  @include bold-font;
+  margin: 0 aut 20px auto;
+  text-shadow: none;
+  font-size: 22px;
+  color: #fff;
+}
+
+.company-description {
+  text-shadow: none;
+  color: #fff;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#display-screen-buttons {
+  display: block;
+  margin: 0px auto;
+  padding-top: 40px;
+  vertical-align: none;
+}
+
+#display-screen-buttons h4 {
+  text-shadow: none;
+  font-size: 12px;
+}
+
+#about {
+  margin: 0;
+  padding: 10px;
+  background: $page-bg-gradient-start;
+}
+
+#about h1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.steps {
+  display: block;
+  box-shadow: none;
+  margin: 10px auto;
+  padding: 0 10px;
+  width: 90%;
+  height: 150px;
+  border: none;
+  border-bottom: 2px solid $theme-color;
+  border-radius: 5px;
+  vertical-align: none;
+}
+
+.step-icon {
+  height: auto;
+}
+
+.step-icon .fa {
+  padding: 5px;
+  font-size: 35px;
+  color: #669b41;
+}
+
+.step-icon h4 {
+  margin: 10px auto;
+  font-size: 14px;
+}
+
+.step-text {
+  padding: 10px;
+  height: auto;
+  background: $page-bg-gradient-end;
+  text-align: justify;
+  border-radius: 5px;
+}
+
+.step-text span {
+  font-size: 14px;
+}
+
+#pricing {
+  box-shadow: none;
+  margin: 0px auto;
+}
+
+#shifts-info {
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  box-shadow: none;
+  padding: 15px;
+  background: rgba(47,47,47,.6);
+  border-radius: 10px;
+  vertical-align: inherit;
+}
+
+#shifts-info h4 {
+  @include txt-shadow($theme-color);
+  text-shadow: none;
+  margin: 0;
+  font-size: 20px;
+}
+
+#shifts-info li {
+  text-shadow: none;
+  margin: 0;
+  font-size: 18px;
+}
+
+#pricing-info {
+  display: block;
+  width: auto;
+  vertical-align: inherit;
+}
+
+#pricing-info p {
+  font-size: 16px;
+  margin: 5px auto 5px 15px;
+}
+
+.prices {
+  font-size: 22px;
+}
+
+.prices span {
+  font-size: 18px;
+}
+
+#user-signup-flow {
+  margin: 20px auto;
+}
+
+#user-signup-flow span {
+  font-size: 20px;
+}
+
+#faq {
+  padding: 20px 10px;
+}
+
+#faq h1 {
+  font-size: 22px;
+}
+
+#faq-header {
+  font-size: 16px;
+}
+
+.eligibility-rules {
+  margin: 0;
+}
+
+.eligibility-rules h2 {
+  font-size: 20px;
+}
+
+.eligibility-rules ul {
+  margin: 0;
+}
+
+.eligibility-rules  li {
+  margin: 2px auto;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.requirement .fa {
+  font-size: 20px;
+}
+
+.requirement span {
+  font-size: 16px;
+}
+
+#faq p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+#more-questions {
+  padding: 10px 0;
+}
+
+.forum-section-header {
+  @include centered;
+  font-size: 22px;
+}
+
+.question-answer-pairs {
+  @include centered;
+  margin: 5px 10px;
+}
+
+.question {
+  padding: 10px;
+  width: auto;
+  cursor: auto;
+}
+
+.question span {
+  font-size: 15px;
+}
+
+.question .fa {
+  float: none;
+  font-size: 14px;
+}
+
+.answer {
+  @include align-left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#footer {
+  font-size: 12px;
+}
