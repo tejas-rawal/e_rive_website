@@ -102,13 +102,13 @@
   display: block;
   box-shadow: none;
   margin: 10px auto;
-  padding: 0 10px;
+  padding: 5px;
   width: 90%;
-  height: 150px;
+  height: auto;
   border: none;
   border-bottom: 2px solid $theme-color;
   border-radius: 5px;
-  vertical-align: none;
+  vertical-align: inherit;
 }
 
 .step-icon {
@@ -130,7 +130,6 @@
   padding: 10px;
   height: auto;
   background: $page-bg-gradient-end;
-  text-align: justify;
   border-radius: 5px;
 }
 
