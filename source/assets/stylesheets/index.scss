@@ -10,20 +10,14 @@ html {
 body {
   @include main-site-fnt;
   @include main-site-bg;
+  @include centered;
   margin: 0;
   height: 100%;
-  text-align: center;
   font-size: 14px;
 }
 
 h1 {
   @include bold-font;
-  @include upcase;
-  color: $theme-color;
-}
-
-h4 {
-  color: $theme-color;
 }
 
 ul {
@@ -43,7 +37,7 @@ ul {
   padding: 15px 30px;
   background: $theme-color;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
@@ -54,9 +48,19 @@ ul {
   transition: all 100ms linear;
 }
 
+.section {
+  padding: 50px 20px;
+  background: rgba(0,0,0,.7);
+  height: inherit;
+}
+
 #header {
   margin: auto 25px;
   padding: 10px;
+}
+
+#header-mobile {
+  display: none;
 }
 
 .header-div {
@@ -71,7 +75,7 @@ ul {
 }
 
 #logo-container img {
-  width: 60px;
+  width: 90px;
 }
 
 #nav-holder {
@@ -87,7 +91,7 @@ ul {
 
 .nav-link {
   padding: 8px;
-  color: $theme-color-dark;
+  color: $dark-text;
   font-size: 20px;
   text-decoration: none;
 }
@@ -98,9 +102,8 @@ ul {
 }
 
 #main-display {
-  @include div-shadow;
   margin: 0px auto;
-  height: 500px;
+  height: 550px;
   background: url($main-display-img);
   @include full-bg;
 }
@@ -110,19 +113,16 @@ ul {
   margin: 75px auto 0px 0px;
   width: 60%;
   vertical-align: middle;
+  color: #fff;
 }
 
 #company-slogan {
   @include align-left;
-  @include txt-shadow($text-shadow-color);
   font-size: 40px;
-  color: $theme-color;
 }
 
 .company-description {
   @include align-left;
-  @include txt-shadow($text-shadow-color);
-  color: $theme-color;
   margin: 5px auto;
   padding: 5px;
   font-size: 25px;
@@ -136,8 +136,7 @@ ul {
 }
 
 #display-screen-buttons h4 {
-  @include txt-shadow($text-shadow-color);
-  color: $theme-color;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -148,23 +147,15 @@ ul {
 }
 
 #about h1 {
-  @include section-h1($theme-color);
-  color: $theme-color-dark;
-}
-
-#about h4 {
-  color: $theme-color-dark;
+  @include section-h1($dark-text);
 }
 
 .steps {
   @include inline-el;
-  @include div-shadow;
   margin: 10px;
   padding: 15px;
   width: 250px;
   height: 250px;
-  border: 2px solid $theme-color;
-  border-radius: 5px;
   vertical-align: top;
 }
 
@@ -173,126 +164,116 @@ ul {
 }
 
 .step-icon .fa {
-  padding: 10px;
-  font-size: 45px;
+  padding: 5px;
+  font-size: 55px;
   color: $theme-color;
 }
 
 .step-icon h4 {
-  margin: 15px auto;
+  margin: 10px auto;
   font-size: 18px;
   @include upcase;
+  color: $dark-text;
 }
 
 .step-text {
+  @include align-left;
   padding: 20px 10px;
   height: 80px;
   background: $page-bg-gradient-end;
-  text-align: justify;
   border-radius: 5px;
 }
 
 .step-text span {
   font-size: 16px;
-  color: $theme-color-dark;
+  color: $dark-text;
 }
 
 #pricing {
-  @include div-shadow;
   margin: 0px auto;
-  padding: 60px 0 60px 0;
-  height: 500px;
   background: url($prius-image-url);
   @include full-bg;
 }
 
-.pricing-section {
-  padding: 20px;
-  border: 2px solid #e2e2e2;
-  background: rgba(255,255,255, 0.75);
-  border-radius: 10px;
-}
-
 #shifts-info {
   @include inline-el;
-  margin-right: auto;
-  width: 20%;
+  padding: 40px 10px;
+  width: 250px;
   vertical-align: middle;
+  color: #fff;
 }
 
 #shifts-info h4 {
   margin: 0;
-  font-size: 30px;
-  color: $theme-color-dark;
+  font-size: 24px;
 }
 
 #shifts-info li {
   @include underline;
-  color: $theme-color-dark;
   margin: 5px auto;
   padding: 5px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 #pricing-info {
   @include inline-el;
   @include align-left;
-  width: 70%;
+  width: 700px;
   vertical-align: middle;
+  color: #fff;
 }
 
 #pricing-info p {
-  font-size: 20px;
-  color: $theme-color-dark;
+  margin: 5px auto;
+  font-size: 18px;
 }
 
 .prices {
-  color: $theme-color-dark;
   margin: 5px auto;
   padding: 5px;
   font-size: 30px;
   font-weight: bold;
 }
 
+.prices span {
+  font-family: Arial;
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: 25px;
+}
+
 #user-signup-flow {
-  margin: 30px auto;
+  margin: 50px auto 20px auto;
 }
 
-#user-signup-flow div {
-  @include inline-el;
-  margin: auto 10px;
-  vertical-align: top;
-}
-
-#info-icon .fa {
-  font-size: 35px;
-  color: $theme-color-dark;
-}
-
-#info-text {
-  width: 70%;
-}
-
-#info-text span {
+#user-signup-flow span {
   font-size: 22px;
   font-weight: bold;
-  color: $theme-color-dark;
+  color: #fff;
 }
 
 #faq {
   margin: 0px auto;
-  padding: 60px 0 60px 0;
+  padding: 40px 10px;
+  background: $page-bg-gradient-start;
 }
 
 #faq h1 {
-  color: $theme-color-dark;
+  color: $dark-text;
+}
+
+#faq p {
+  @include centered;
+  margin: auto 20px;
+  font-size: 20px;
+  color: $dark-text;
 }
 
 #faq-header {
   font-size: 18px;
   font-style: italic;
-  color: $theme-color-dark;
+  color: $dark-text;
 }
 
 .eligibility-rules {
@@ -303,26 +284,20 @@ ul {
 
 .eligibility-rules h2 {
   @include bold-font;
-  color: $theme-color-dark;
+  color: $dark-text;
   font-size: 25px;
 }
 
-.eligibility-rules h4 {
-  @include bold-font;
-  color: $theme-color-dark;
-  font-size: 22px;
+.eligibility-rules ul {
+  margin: auto 30px;
 }
 
-.eligibility-rules  li {
+.eligibility-rules li {
   margin: 5px auto;
   padding: 5px;
   font-size: 20px;
-  color: $theme-color;
-}
-
-.requirement .fa {
-  font-size: 30px;
-  color: $theme-color-dark;
+  color: $dark-sub-text;
+  font-weight: bold;
 }
 
 .requirement {
@@ -331,14 +306,22 @@ ul {
   vertical-align: middle;
 }
 
-.requirement span {
-  font-size: 20px;
+.requirement .fa {
+  font-size: 30px;
   color: $theme-color;
 }
 
-ul.with-bullets {
-  margin: auto 30px;
-  list-style-type: disc;
+.requirement span {
+  font-size: 20px;
+  color: $dark-sub-text;
+  font-weight: bold;
+}
+
+#more-questions {
+  margin: 0px auto;
+  padding: 30px 0;
+  background: $page-bg-gradient-end;
+  @include full-bg;
 }
 
 .question-answer-pairs {
@@ -350,46 +333,35 @@ ul.with-bullets {
 .question {
   padding: 8px 10px;
   width: 70%;
-  background: $theme-color-dark;
-  border: 1px solid #fff;
+  background: $page-bg-gradient-start;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .question span {
   font-size: 16px;
-  color: #fff;
+  color: $dark-text;
 }
 
 .question .fa {
   padding: 0 10px;
   float: right;
-  font-size: 18px;
-  color: #fff;
+  font-size: 16px;
+  color: $dark-text;
 }
 
-.answer-hidden {
+.answer {
+  margin: 10px;
+  padding: 15px;
+  color: $dark-text;
+  border: 1px solid #e2e2e2;
+  background: $page-bg-gradient-start;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.closed {
   display: none;
-  transition: display 1s ease-out;
-  margin: 10px;
-  padding: 15px;
-  color: $theme-color;
-  border: 1px solid #e2e2e2;
-  background: rgba(255,255,255, 0.5);
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.answer-show {
-  display: block;
-  transition: display 1s ease-out;
-  margin: 10px;
-  padding: 15px;
-  color: $theme-color;
-  border: 1px solid #e2e2e2;
-  background: rgba(255,255,255, 0.5);
-  border-radius: 10px;
-  font-size: 16px;
 }
 
 .answer .list-item {
@@ -402,8 +374,8 @@ ul.with-bullets {
 }
 
 #footer {
+  margin: 0;
   background: $page-bg-gradient-start;
-  margin: 20px auto;
   padding: 10px;
 }
 
@@ -413,4 +385,8 @@ ul.with-bullets {
 
 #facebook-logo .fa {
   color: #3b5998;
+}
+
+@media screen and (max-width: 600px) {
+  @import "mobile";
 }
