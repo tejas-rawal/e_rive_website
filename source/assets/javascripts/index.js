@@ -46,16 +46,18 @@ var displayAnswer = () => {
 
   Array.from(questions, dropdown => {
     dropdown.addEventListener('click', () => {
-      removeEl(dropdown.children[dropdown.children.length - 1]);
-
+      const klass = 'closed';
+      var icon = dropdown.querySelector('.fa');
       var answerClassList = dropdown.nextElementSibling.classList;
-      var closedFlag = answerClassList.contains('closed');
+      var closedFlag = answerClassList.contains(klass);
 
-      if(answerClassList.contains('closed')) {
-        answerClassList.remove('closed');
+      if(icon) removeEl(icon);
+
+      if(closedFlag) {
+        answerClassList.remove(klass);
       }
       else {
-        answerClassList.add('closed');
+        answerClassList.add(klass);
       }
 
       switchArrow(dropdown, !closedFlag);
@@ -68,11 +70,15 @@ var switchArrow = (el, closed) => {
   var minus = '<i class="fa fa-minus"></i>'
 
   if(closed) {
-    el.insertAdjacentHTML('beforeend', plus);
+    appendBeforeEnd(el, plus);
   }
   else {
-    el.insertAdjacentHTML('beforeend', minus);
+    appendBeforeEnd(el, minus);
   }
+}
+
+var appendBeforeEnd = (el, html) => {
+  el.insertAdjacentHTML('beforeend', html);
 }
 
 var removeEl = el => {
