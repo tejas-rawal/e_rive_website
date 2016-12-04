@@ -55,8 +55,12 @@ ul {
 }
 
 #header {
-  margin: auto 25px;
   padding: 10px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: $page-bg-gradient-start;
+  opacity: .95;
 }
 
 #header-mobile {
@@ -102,7 +106,7 @@ ul {
 }
 
 #main-display {
-  margin: 0px auto;
+  margin-top: 135px;
   height: 550px;
   background: url($main-display-img);
   @include full-bg;
