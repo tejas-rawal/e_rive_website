@@ -20,7 +20,7 @@ var smoothScroll = elementId => {
         scrollContainer.scrollTop += 1;
     } while (scrollContainer.scrollTop == 0);
 
-    var targetY = 0;
+    var targetY = -135;
 
     do {
         if (target == scrollContainer) break;
@@ -28,6 +28,7 @@ var smoothScroll = elementId => {
     } while (target = target.offsetParent);
 
     var pixelsPerStep = Math.max(min_pixels_per_step, (targetY - scrollContainer.scrollTop) / max_scroll_steps);
+
     var stepFunc = () => {
         scrollContainer.scrollTop = Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
         if (scrollContainer.scrollTop >= targetY) return;
