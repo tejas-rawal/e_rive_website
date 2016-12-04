@@ -49,6 +49,7 @@
 
 #main-display {
   box-shadow: none;
+  margin: 0px auto;
 }
 
 #display-text-container {
@@ -173,16 +174,26 @@
 }
 
 #pricing-info p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 5px auto 5px 15px;
 }
 
 .prices {
-  font-size: 22px;
+  margin: 3px 0;
+  padding: 0;
 }
 
-.prices span {
-  font-size: 18px;
+.price-type span {
+  margin: 0px;
+  font-size: 20px;
+}
+
+.vehicle-type {
+  padding: 3px;
+}
+
+.shift-price {
+  font-weight: normal;
 }
 
 #user-signup-flow {
@@ -223,8 +234,12 @@
   font-size: 16px;
 }
 
-.requirement .fa {
-  font-size: 20px;
+.eligibility-rules li .requirement:first-of-type {
+  display: none;
+}
+
+.requirement {
+  margin: 0;
 }
 
 .requirement span {
@@ -273,4 +288,8 @@
 
 #footer {
   font-size: 12px;
+}
+
+#facebook-logo a {
+  font-size: 40px;
 }
