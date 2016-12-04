@@ -208,12 +208,12 @@ ul {
 }
 
 #shifts-info h4 {
+  @include underline;
   margin: 0;
   font-size: 24px;
 }
 
 #shifts-info li {
-  @include underline;
   margin: 5px auto;
   padding: 5px;
   font-size: 22px;
@@ -236,14 +236,21 @@ ul {
 .prices {
   margin: 5px auto;
   padding: 5px;
-  font-size: 30px;
   font-weight: bold;
 }
 
-.prices span {
-  font-family: Arial;
-  text-transform: lowercase;
-  font-weight: normal;
+.price-type span {
+  display: block;
+  margin: 5px auto;
+}
+
+.vehicle-type {
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.shift-price {
+  padding-left: 20px;
   font-size: 25px;
 }
 
