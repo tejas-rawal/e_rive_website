@@ -49,7 +49,7 @@ module.exports = {
       { test: /\.css$/, loader: "style!css" },
 
       {
-        test: /.*\.(gif|png|jpe?g|jpg|svg)$/i,
+        test: /.*\.(gif|png|jpe?g|jpg|svg|pdf)$/i,
         loader: "file?hash=sha512&digest=hex&name=assets/images/[name].[ext]"
       }
     ]
